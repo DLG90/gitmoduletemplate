@@ -38,11 +38,11 @@ s.ios.frameworks  = 'UIKit','Foundation'
 # ------------------ 组件依赖信息段 ------------------------
 # 该部分组件描述主要描述组件依赖公司产品库中的组件信息
 
-s.ios.dependency 'C_YM_Router'
-s.ios.dependency 'C_YM_Network'
-s.ios.dependency 'C_YM_BaseModule'
-s.ios.dependency 'C_YM_Utils'
-s.ios.dependency 'B_YM_IGListTemplate'
+#s.ios.dependency 'C_YM_Router'
+#s.ios.dependency 'C_YM_Network'
+#s.ios.dependency 'C_YM_BaseModule'
+#s.ios.dependency 'C_YM_Utils'
+#s.ios.dependency 'B_YM_IGListTemplate'
 
 # -------------------------------------------------------
 # ------------------ 组件根路径信息段 ----------------------
