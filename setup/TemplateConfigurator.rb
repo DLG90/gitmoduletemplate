@@ -70,21 +70,21 @@ module Pod
     def run
       @message_bank.welcome_message
 
-      platform = self.ask_with_answers("What platform do you want to use?", ["iOS", "macOS"]).to_sym
-
-      case platform
-        when :macos
-          ConfigureMacOSSwift.perform(configurator: self)
-        when :ios
-          framework = self.ask_with_answers("What language do you want to use?", ["Swift", "ObjC"]).to_sym
-          case framework
-            when :swift
-              ConfigureSwift.perform(configurator: self)
-
-            when :objc
-              ConfigureIOS.perform(configurator: self)
-          end
-      end
+#      platform = self.ask_with_answers("What platform do you want to use?", ["iOS", "macOS"]).to_sym
+#
+#      case platform
+#        when :macos
+#          ConfigureMacOSSwift.perform(configurator: self)
+#        when :ios
+#          framework = self.ask_with_answers("What language do you want to use?", ["Swift", "ObjC"]).to_sym
+#          case framework
+#            when :swift
+#              ConfigureSwift.perform(configurator: self)
+#
+#            when :objc
+     ConfigureIOS.perform(configurator: self)
+#          end
+#      end
 
       replace_variables_in_files
       clean_template_files
@@ -102,18 +102,18 @@ module Pod
     #----------------------------------------#
 
     def ensure_carthage_compatibility
-      FileUtils.ln_s('Example/Pods/Pods.xcodeproj', '_Pods.xcodeproj')
+      FileUtils.ln_s('source/Pods/Pods.xcodeproj', '_Pods.xcodeproj')
     end
 
     def run_pod_install
       puts "\nRunning " + "pod install".magenta + " on your new library."
       puts ""
 
-      Dir.chdir("Example") do
+      Dir.chdir("source") do
         system "pod install"
       end
 
-      `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
+      `git add source/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
 
@@ -155,7 +155,7 @@ module Pod
     end
 
     def customise_prefix
-      prefix_path = "Example/Tests/Tests-Prefix.pch"
+      prefix_path = "source/Tests/Tests-Prefix.pch"
       return unless File.exists? prefix_path
 
       pch = File.read prefix_path
@@ -165,7 +165,7 @@ module Pod
 
     def set_test_framework(test_type, extension, folder)
       content_path = "setup/test_examples/" + test_type + "." + extension
-      tests_path = "templates/" + folder + "/Example/Tests/Tests." + extension
+      tests_path = "templates/" + folder + "/source/Tests/Tests." + extension
       tests = File.read tests_path
       tests.gsub!("${TEST_EXAMPLE}", File.read(content_path) )
       File.open(tests_path, "w") { |file| file.puts tests }
@@ -216,7 +216,7 @@ module Pod
     end
 
     def podfile_path
-      'Example/Podfile'
+      'source/Podfile'
     end
 
     #----------------------------------------#
