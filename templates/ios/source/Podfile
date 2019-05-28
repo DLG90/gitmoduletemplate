@@ -1,13 +1,15 @@
+platform :ios, '9.0'
+# 如果是业务组件，则必须要把user_frameworks!打开
 use_frameworks!
 
-platform :ios, '8.0'
+#公司产品库
+source "https://git.hikvision.com.cn/scm/hik-system/cocoapods.git"
+
+# 如果是业务组件，也就是动态库，下述这块必须添加，否则静态库和动态库一起用，则会编译失败
+pre_install do |installer|
+	def installer.verify_no_static_framework_transitive_dependencies; end
+end
 
 target '${POD_NAME}_Example' do
-  pod '${POD_NAME}', :path => '../'
 
-  target '${POD_NAME}_Tests' do
-    inherit! :search_paths
-
-    ${INCLUDED_PODS}
-  end
 end
