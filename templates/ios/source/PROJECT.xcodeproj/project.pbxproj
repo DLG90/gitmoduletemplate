@@ -116,7 +116,6 @@
 		6003F593195388D20070C39A /* Example for PROJECT */ = {
 			isa = PBXGroup;
 			children = (
-				FF19BF06229CF01D007C95F2 /* code */,
 				6003F59C195388D20070C39A /* CPDAppDelegate.h */,
 				6003F59D195388D20070C39A /* CPDAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -165,85 +164,6 @@
 			children = (
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		FF19BF06229CF01D007C95F2 /* code */ = {
-			isa = PBXGroup;
-			children = (
-				FF19BF07229CF01D007C95F2 /* ProtocolModels */,
-				FF19BF08229CF01D007C95F2 /* Venders */,
-				FF19BF09229CF01D007C95F2 /* ViewModels */,
-				FF19BF0A229CF01D007C95F2 /* Network */,
-				FF19BF0B229CF01D007C95F2 /* Utils */,
-				FF19BF0C229CF01D007C95F2 /* Models */,
-				FF19BF0D229CF01D007C95F2 /* SectionControllers */,
-				FF19BF0E229CF01D007C95F2 /* Controllers */,
-				FF19BF0F229CF01D007C95F2 /* Views */,
-			);
-			path = code;
-			sourceTree = "<group>";
-		};
-		FF19BF07229CF01D007C95F2 /* ProtocolModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProtocolModels;
-			sourceTree = "<group>";
-		};
-		FF19BF08229CF01D007C95F2 /* Venders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Venders;
-			sourceTree = "<group>";
-		};
-		FF19BF09229CF01D007C95F2 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		FF19BF0A229CF01D007C95F2 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		FF19BF0B229CF01D007C95F2 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		FF19BF0C229CF01D007C95F2 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		FF19BF0D229CF01D007C95F2 /* SectionControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SectionControllers;
-			sourceTree = "<group>";
-		};
-		FF19BF0E229CF01D007C95F2 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		FF19BF0F229CF01D007C95F2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
