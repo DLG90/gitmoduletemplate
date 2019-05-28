@@ -76,6 +76,7 @@ module Pod
 
       # remove podspec for osx
       `rm ./NAME-osx.podspec`
+      `rm ./.git`
     end
   end
 
